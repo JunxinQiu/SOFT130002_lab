@@ -54,7 +54,7 @@ function testMail(telephone,mail) {
     ⑤str为字符串。
 */
 function testRedundancy(str) {
-        var str_redundancy = /(\b\w+\b)(?:\s\1)+\b/gi;
+        var str_redundancy =/(\b[a-z]+\b) \1/i;
         var array = new Set();
         var count = 10;
         while ((temp = str_redundancy.exec(str)) && count) {
